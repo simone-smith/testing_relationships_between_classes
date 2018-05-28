@@ -32,12 +32,15 @@ RSpec.describe SecretDiary do
   end
 
   context "when unlocked" do
+    before { secret_diary.unlock }
     it "gets read" do
       allow(diary).to receive(:read).and_return("Diary contents")
-      secret_diary.unlock
       expect(secret_diary.read).to eq diary.read
     end
 
-    pending "gets written"
+    it "gets written" do
+      allow(diary).to receive(:write)
+      expect(secret_diary.write("Dear diary")).to eq nil
+    end
   end
 end
