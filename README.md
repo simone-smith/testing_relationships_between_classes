@@ -1,3 +1,5 @@
+## Working through a set of exercises designed by Makers Academy to practise writing tests in RSpec 
+
 # Testing Relationships Between Classes
 
 ## Quickstart
